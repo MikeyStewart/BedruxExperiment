@@ -7,15 +7,14 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
-import com.google.firebase.remoteconfig.ktx.get
 import com.google.firebase.remoteconfig.ktx.remoteConfig
 import com.google.firebase.remoteconfig.ktx.remoteConfigSettings
+import com.mstewart.bedruxexperiment.arch.ViewData
 import com.mstewart.bedruxexperiment.arch.dummyData
 import com.mstewart.bedruxexperiment.arch.mapJsonToScreens
 import com.mstewart.bedruxexperiment.ui.theme.BedruxExperimentTheme
@@ -53,7 +52,10 @@ class MainActivity : ComponentActivity() {
                     // TODO: Move to repository
 //                    val screens = mapJsonToScreens(dummyData)
                     val appState = appConfigJson.collectAsState()
-                    val screens = mapJsonToScreens(appState.value)
+                    val screens = mutableListOf<ViewData>()
+                    if (appState.value.isNotEmpty()) {
+                        screens.addAll(mapJsonToScreens(appState.value))
+                    }
 
                     AppScaffold(screens)
                 }
