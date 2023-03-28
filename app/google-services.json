@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "437312350194",
+    "project_id": "bedrux-c617f",
+    "storage_bucket": "bedrux-c617f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:437312350194:android:f1cdb037532fec7e4aad6b",
+        "android_client_info": {
+          "package_name": "com.mstewart.bedruxexperiment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "437312350194-jtukg9inf16qq4mnhj9c81pq8f5ivaiv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_5mORQWH9GZRiBAvkj9PYBVBNpF7xHGE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "437312350194-jtukg9inf16qq4mnhj9c81pq8f5ivaiv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
